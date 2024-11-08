@@ -60,7 +60,7 @@ class MainWindow(QMainWindow):
             s_count = int(self.special_edit.text())
             c_count = int(self.char_edit.text())
         except ValueError:
-            QMessageBox.warning(self, "ValueError", "Please enter valid integer values.")
+            QMessageBox.warning(self, "Input Error", "Please fill every column")
 
         total_count = n_count + s_count + c_count
         if total_count > pass_len:
