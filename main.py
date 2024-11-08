@@ -1,4 +1,4 @@
-from PyQt6.QtGui import QIntValidator
+from PyQt6.QtGui import QIntValidator, QIcon
 from PyQt6.QtWidgets import (QMainWindow, QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QGridLayout,
                              QMessageBox)
 from PyQt6.QtCore import Qt
@@ -10,6 +10,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Password Generator')
+        self.setWindowIcon(QIcon('icon.png'))
         self.setMinimumSize(400, 150)
 
         central_widget = QWidget(self)
