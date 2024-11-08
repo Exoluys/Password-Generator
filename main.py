@@ -8,7 +8,9 @@ import string
 
 
 class MainWindow(QMainWindow):
+    """MainWindow class for the creation of the application"""
     def __init__(self):
+        """MainWindow constructor for the layout of the application"""
         super().__init__()
 
         # Set up window properties
@@ -75,9 +77,7 @@ class MainWindow(QMainWindow):
         self.resize(400, 200)
 
     def generate_password(self):
-        """
-            Generate a password based on the user-specified length and character counts.
-        """
+        """Generate a password based on the user-specified length and character counts."""
         try:
             # Retrieve and validate user input
             pass_len = int(self.pass_edit.text())
