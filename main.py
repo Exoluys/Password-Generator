@@ -61,10 +61,12 @@ class MainWindow(QMainWindow):
             c_count = int(self.char_edit.text())
         except ValueError:
             QMessageBox.warning(self, "Input Error", "Please fill every column")
+            return
 
         total_count = n_count + s_count + c_count
         if total_count > pass_len:
-            QMessageBox.warning("Total length exceeds password length.")
+            QMessageBox.warning(self, "Input Error", "Total length exceeds password length.")
+            return
 
         numbers = [str(random.randint(1, 9)) for _ in range(n_count)]
         special_chars = [random.choice(string.punctuation) for _ in range(s_count)]
