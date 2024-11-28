@@ -8,7 +8,10 @@ import string
 
 
 class MainWindow(QMainWindow):
-    """MainWindow class for the creation of the application"""
+    """
+    MainWindow class for the creation of the application
+    """
+
     def __init__(self):
         """MainWindow constructor for the layout of the application"""
         super().__init__()
